@@ -1,4 +1,4 @@
-name: "Webhook Event example"
+name: "Webhook Event Example"
 
 on:
   repository_dispatch:
@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        
       - name: Run a script
-        run: echo "Event of type: ${{ github.event_name }}"
+        run: 'echo "Event of type: ${{ github.event_name }}"'
